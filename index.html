@@ -162,22 +162,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#重要部分：</p>
+        <p>重要部分：</p>
 <p><a href="https://link.jianshu.com?t=http://developer.android.com/intl/zh-cn/tools/debugging/debugging-ui.html" target="_blank" rel="noopener">Optimizing Your UI</a><br><a href="https://link.jianshu.com?t=http://developer.android.com/intl/zh-cn/tools/debugging/improving-w-lint.html" target="_blank" rel="noopener">Improving Your Code with lint</a><br><a href="https://www.jianshu.com/p/40f660e17a73" target="_blank" rel="noopener">理解Android硬件加速原理的小白文</a><br><a href="https://jaeger.itscoder.com/android/2016/09/29/android-performance-overdraw.html" target="_blank" rel="noopener">Android 过度绘制优化</a><br><a href="https://www.jianshu.com/p/5e508beffac8" target="_blank" rel="noopener">Android 优化——卡顿优化</a><br><a href="https://blog.csdn.net/u011403718/article/details/54630760" target="_blank" rel="noopener">Android硬件加速原理与实现简介</a><br><img src="https://upload-images.jianshu.io/upload_images/3328374-698a112c8fc6ca1a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>#其他</p>
-<p>###<include></include></p>
+<p>其他</p>
+<include>
+
 <p>简单来说<include>标签就是为了一些通用的UI来使用的。</include></p>
-<p>###<merge></merge></p>
+<merge>
+
 <p>简单来说<merge>标签可以有效的减少多余的布局嵌套。</merge></p>
-<p>####merge注意事项<br>    <merge>只能作为XML布局的根标签使用。当Inflate以<merge>开头的布局文件时，必须指定一个父ViewGroup，并且必须设定attachToRoot为true(attachToRoot为LayoutInflate的第三个参数)。</merge></merge></p>
-<p>###View延时加载<viewstub></viewstub></p>
+<p>merge注意事项<br>    <merge>只能作为XML布局的根标签使用。当Inflate以<merge>开头的布局文件时，必须指定一个父ViewGroup，并且必须设定attachToRoot为true(attachToRoot为LayoutInflate的第三个参数)。</merge></merge></p>
+<p>View延时加载<viewstub></viewstub></p>
 <p>可以使用<viewstub>来引用并实现延迟加载。<viewstub>是一个非常轻量级的控件，它没有大小，没有绘制，也不参与布局。填写资料的时候，有时会有更多资料填写，这时候我们需要实现点击更多才显示其他资料。这时候我们需要实现点击更多才显示其他资料，效果如下：<img src="http://upload-images.jianshu.io/upload_images/3328374-007d47eebf52a0c8?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br>点击more的时候会多出两个输入框<img src="http://upload-images.jianshu.io/upload_images/3328374-593cf12ee458a6dd?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></viewstub></viewstub></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; android:layout_width=&quot;match_parent&quot; android:orientation=&quot;vertical&quot; android:layout_height=&quot;match_parent&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;EditText android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;wrap_content&quot; android:layout_marginLeft=&quot;10dp&quot; android:layout_marginRight=&quot;10dp&quot; android:hint=&quot;name&quot; /&gt;</span><br><span class="line"></span><br><span class="line">&lt;ViewStub android:id=&quot;@+id/view_stub&quot; android:layout_width=&quot;match_parent&quot; android:layout=&quot;@layout/more_layout&quot; android:layout_height=&quot;wrap_content&quot; /&gt;</span><br><span class="line"></span><br><span class="line">&lt;Button android:id=&quot;@+id/btn_more&quot; android:layout_width=&quot;wrap_content&quot; android:text=&quot;more&quot; android:layout_height=&quot;wrap_content&quot; /&gt;</span><br><span class="line">&lt;/LinearLayout&gt;</span><br></pre></td></tr></table></figure>
 <p><code>more_layout.xml</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;match_parent&quot; android:orientation=&quot;vertical&quot;&gt;</span><br><span class="line"></span><br><span class="line"> &lt;EditText android:id=&quot;@+id/et_more1&quot; android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;wrap_content&quot; android:layout_margin=&quot;10dp&quot; android:hint=&quot;more1&quot; /&gt;</span><br><span class="line"></span><br><span class="line">&lt;EditText android:id=&quot;@+id/et_more2&quot; android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;wrap_content&quot; android:layout_marginLeft=&quot;10dp&quot; android:layout_marginRight=&quot;10dp&quot; android:hint=&quot;more2&quot; /&gt;</span><br><span class="line">&lt;/LinearLayout&gt;</span><br></pre></td></tr></table></figure>
 <p>点击more进行显示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> btn_more = (Button) findViewById(R.id.btn_more); btn_more.setOnClickListener(new View.OnClickListener() &#123; @Override public void onClick(View v) &#123;</span><br><span class="line"></span><br><span class="line">ViewStub viewStub =(ViewStub)findViewById(R.id.view_stub);</span><br><span class="line"></span><br><span class="line">1.viewStub.setVisibility(View.VISIBLE);</span><br><span class="line"></span><br><span class="line"> if (viewStub != null) &#123;</span><br><span class="line">2.View inflatedView = viewStub.inflate();</span><br><span class="line">et_more1 = (EditText) inflatedView.findViewById(R.id.et_more1); et_more2 =(EditText)inflatedView.findViewById(R.id.et_more2); &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> &#125;);</span><br></pre></td></tr></table></figure></p>
 <p>有两种方法可以让<viewstub>的布局进行显示，一种是直接设置viewStub.setVisibility(View.VISIBLE)，第二种则是使用inflate来加载，如要获取到里面控件，我们一般采用第二种方法。<br>从上面可以看出<viewstub>的用法类似于<include>，不同的是<viewstub>必须指定layout_width和layout_height属性，还有一点需要注意<viewstub>所加载的布局是不可以使用<merge>标签的。</merge></viewstub></viewstub></include></viewstub></viewstub></p>
-<p>#####ViewStub总结</p>
+<p>ViewStub总结</p>
 <pre><code>优点：
 
 ViewStub轻量级，而且占用资源非常少，在调用ViewStub.inflate()时，ViewStub才会加载布局进行实例化，然后ViewStub的所有属性将会转向它所指的布局，节省内存资源。
@@ -193,7 +195,7 @@ ViewStub只能Inflate一次，之后ViewStub对象会被置为空。所以说，
 根据以上总结，ViewStub使用场景应如下：
     在程序的运行期间，某个布局在Inflate后，就不会有变化，除非重新启动。因为ViewStub只能Inflate一次，之后会被置空，所以无法指望后面接着使用ViewStub来控制布局。所以当需要在运行时不止一次的显示和隐藏某个布局，那么ViewStub是做不到的。这时就只能使用View的可见性来控制了。
     想要控制显示与隐藏的是一个布局文件，而非某个View。
-</code></pre>
+</code></pre></merge></include>
       
 
       
