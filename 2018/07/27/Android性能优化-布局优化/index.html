@@ -6,15 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>小鸡啄android</title>
+  <title>Android性能优化--布局优化 | 小鸡啄android</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="小鸡啄android">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="#重要部分： Optimizing Your UIImproving Your Code with lint理解Android硬件加速原理的小白文Android 过度绘制优化Android 优化——卡顿优化Android硬件加速原理与实现简介 #其他 ### 简单来说标签就是为了一些通用的UI来使用的。 ### 简单来说标签可以有效的减少多余的布局嵌套。 ####merge注意事项    只能作为">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android性能优化--布局优化">
+<meta property="og:url" content="http://yoursite.com/2018/07/27/Android性能优化-布局优化/index.html">
 <meta property="og:site_name" content="小鸡啄android">
+<meta property="og:description" content="#重要部分： Optimizing Your UIImproving Your Code with lint理解Android硬件加速原理的小白文Android 过度绘制优化Android 优化——卡顿优化Android硬件加速原理与实现简介 #其他 ### 简单来说标签就是为了一些通用的UI来使用的。 ### 简单来说标签可以有效的减少多余的布局嵌套。 ####merge注意事项    只能作为">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3328374-698a112c8fc6ca1a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3328374-007d47eebf52a0c8?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3328374-593cf12ee458a6dd?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-07-27T05:15:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小鸡啄android">
+<meta name="twitter:title" content="Android性能优化--布局优化">
+<meta name="twitter:description" content="#重要部分： Optimizing Your UIImproving Your Code with lint理解Android硬件加速原理的小白文Android 过度绘制优化Android 优化——卡顿优化Android硬件加速原理与实现简介 #其他 ### 简单来说标签就是为了一些通用的UI来使用的。 ### 简单来说标签可以有效的减少多余的布局嵌套。 ####merge注意事项    只能作为">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/3328374-698a112c8fc6ca1a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="小鸡啄android" type="application/atom+xml">
   
@@ -140,16 +148,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Android性能优化-布局优化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Android性能优化-布局优化" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/27/Android性能优化-布局优化/">Android性能优化--布局优化</a>
+    <h1 class="article-title" itemprop="name">
+      Android性能优化--布局优化
     </h1>
   
 
@@ -197,6 +203,27 @@ ViewStub只能Inflate一次，之后ViewStub对象会被置为空。所以说，
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -204,16 +231,75 @@ ViewStub只能Inflate一次，之后ViewStub对象会被置为空。所以说，
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/27/Android性能优化-布局优化/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/27/Android性能优化-布局优化/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/27/打包发布到蒲公英/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Mac 环境 Jenkins + gradle 打包发布到蒲公英</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -233,154 +319,14 @@ ViewStub只能Inflate一次，之后ViewStub对象会被置为空。所以说，
 
 
 
-
   
-    <article id="mac-打包发布到蒲公英" class="article article-type-mac  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/27/打包发布到蒲公英/">Mac 环境 Jenkins + gradle 打包发布到蒲公英</a>
-    </h1>
   
 
-        
-        <a href="/2018/07/27/打包发布到蒲公英/" class="archive-article-date">
-  	<time datetime="2018-07-27T05:11:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.<br>Jenkins环境搭建</p>
-<p>Java的下载安装和环境变量的配置<br>①下载安装：Jenkins的运行依赖Java环境，所以在安装Jenkins之前必须要安装JDK或JRE，<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">Java下载地址</a></p>
-<p>②配置：配置环境变量，相信每个人都是会的，不会在自己找下</p>
-<p>2.<br>Jenkins的下载安装<br>方法一、下载安装可以到Jenki官网（<a href="http://jenkins.io）下载Mac版本的安装包，然后进行手动安装（坑多，不推荐）" target="_blank" rel="noopener">http://jenkins.io）下载Mac版本的安装包，然后进行手动安装（坑多，不推荐）</a></p>
-<p>方法二、使用brew下载安装Jenkins（推荐，简单傻瓜式，下载安装配置一步到位）具体做法如下：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在命令行输入：brew install jenkins</span><br></pre></td></tr></table></figure>
-<p>安装完成后<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在命令行输入：jenkins  启动jeckins</span><br></pre></td></tr></table></figure></p>
-<p>3、<br>Jenkins的环境配置</p>
-<p>基本配置<br>(1) 安装插件<br>启动完毕后，打开浏览器，在地址栏中输入localhost:8080，回车，即可看到一个页面，打开此页面提示的文件地址，输入其中的字符串（或者在安装完毕后控制台有输出，复制到此即可）。<br>②插件的安装<br>进入后，选择自定义插件安装.<br>Git plugin , 不用说，用git需要<br>Gradle Plugin ，gradle需要<br>description setter plugin ，描述构建类型插件<br>Branch API Plugin<br>SSH plugin<br>Git Parameter，参数构建配置git使用<br>Android Emulator Plugin ，可以管理Android sdk，也可以帮助集成Android项目<br>Upload to pgyer 上传蒲公英需要</p>
-<p>(2)配置环境变量<br>系统管理-&gt; 系统设置</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/3328374-3b14a1cd3c0b017e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片.png"></p>
-<ol>
-<li>配置gradle,可以使用自己下载的，指定目录就成。也可以自动安装，我是使用的自动安装，翻墙花点时间</li>
-<li>配置jdk，jdk不用配置到bin目录，只需要安装目录即可</li>
-<li>Android的sdk可以先下载sdk包，再在使用命令操作sdkmanager下载其他包，方式可自行搜索，官方也有<a href="https://developer.android.com/studio/command-line/sdkmanager" target="_blank" rel="noopener">说明</a></li>
-<li>环境变量git，路径指定一定要到git.exe</li>
-</ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/3328374-03bc27990a6591c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片.png"></p>
-<p>4.<br><a href="https://blog.csdn.net/ddxxii/article/details/80207147" target="_blank" rel="noopener">其他</a><br><a href="http://einverne.github.io/post/2016/05/jenkins-android-gradle.html" target="_blank" rel="noopener">利用 Jenkins 持续集成 Android 程序</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/27/打包发布到蒲公英/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-搭建个人网站" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/27/搭建个人网站/">github pager + Hexo 搭建个人网站</a>
-    </h1>
   
 
-        
-        <a href="/2018/07/27/搭建个人网站/" class="archive-article-date">
-  	<time datetime="2018-07-27T05:08:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.<br>你需要拥有一个<a href="https://github.com/" target="_blank" rel="noopener">GitHub 账号</a><br>进入<a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pager</a></p>
-<p>去 <a href="https://github.com" target="_blank" rel="noopener">GitHub</a> 创建一个格式为：<em>username</em>.github.io的库； <a href="https://github.com/new" target="_blank" rel="noopener">create a new repository</a><br><em>username</em> 是你的用户名或者组织名；<br>2.<br>安装 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a><br>参考 <a href="https://hexo.io/docs/" target="_blank" rel="noopener">中文文档 </a>或<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">英文文档</a>。完成该步后，你的电脑便拥有了 Git、Node.js 和 Hexo。</p>
-<p>3.<br> 购买域名<br>速速前往 <a href="http://wanwang.aliyun.com/" target="_blank" rel="noopener">万网</a>，支付宝刷的一声，你就拥有了一个闪闪发光的个人域名啦<br>4.<br>其他看：<a href="https://zhuanlan.zhihu.com/p/26625249?utm_source=wechat_session&amp;utm_medium=social#showWechatShareTip" target="_blank" rel="noopener">知乎</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/27/搭建个人网站/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
+
   
 
 
@@ -403,8 +349,8 @@ ViewStub只能Inflate一次，之后ViewStub对象会被置为空。所以说，
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
